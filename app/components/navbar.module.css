@@ -1,0 +1,16 @@
+.navbar
+{
+    color: #ff5032;
+    border-bottom: 1px solid #555;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    opacity: 1;
+}
+
+.links
+{
+    color: #30ebff;
+}

@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+  color: #ff5032;
+  font-size: 32px;
+}
+
+main
+{
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 500px;
+  max-width: 70%;
+  text-align: center;
+}
+
+.videoContainer
+{
+
+}
+
+.fgVideo
+{
+  text-align: left;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 16vw;
+  position: absolute;
+  opacity: 1;
+  z-index: 200;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.bgVideo
+{
+  width: 100%;
+  z-index: -200;
+  opacity: .25;
+}
+
+p
+{
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
