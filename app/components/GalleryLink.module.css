@@ -1,0 +1,23 @@
+.galleryLink
+{
+    position: relative;
+    display: flex;
+}
+
+.title
+{
+    position: absolute;
+    z-index: 200;
+    text-align: center;
+    padding-top: 4vw;
+    opacity: 0;
+    transition: .25;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.title:hover
+{
+    opacity: 1;
+}

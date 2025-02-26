@@ -1,8 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
+import GalleryLink from "./components/GalleryLink";
+
+interface Category
+{
+  name: string;
+  videoPath: string;
+  href: string;
+}
 
 export default function Home() {
+
+  const categories: Category[] = [
+    {
+      name: "Visual Effects",
+      href: "/",
+      videoPath: "/thumbs/Spaceship Thrusters.webm"
+    }
+  ]
 
   return(
     <div>
@@ -10,16 +26,15 @@ export default function Home() {
       <div className="videoContainer">
         <div className="fgVideo">
           <div>
-            <h1 className="text-8xl mb-8">Hi, I'm Gabriel!</h1>
+            <h1 className="text-7xl mb-8">Hi, I'm Gabriel!</h1>
             <h2 className="text-2xl">My works over 4+ years as a tech artist.</h2>
           </div>
 
-          <iframe class="ytEmbedVideo" src="https://www.youtube.com/embed/Xt-Z47CztaM?si=7-OrD120R5bcFDKY" 
+          <iframe className="ytEmbedVideo" src="https://www.youtube.com/embed/Xt-Z47CztaM?si=7-OrD120R5bcFDKY" 
             title="YouTube video player" 
             style={{width: 640, height:360}}
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
+            allowFullScreen>
 
           </iframe>
         </div>
@@ -32,7 +47,15 @@ export default function Home() {
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art and programming in general.</p>
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
         <p>As for my previous work experiences, I have worked on the RPG Rise of the Third Power, the farming sim One Lonely Outpost and the action adventure game Steampunk Shinobi.</p>
-        <p>Below is my most recent demo reel.</p>
+        
+        <h3>Some of my work:</h3>
+        <div className="grid">
+          {categories.map((e, i) => {
+            return <GalleryLink src={e.videoPath} title={e.name} href={e.href}/>
+          })}
+        
+        </div>
+
       </main>
     </div>
   )
