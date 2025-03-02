@@ -5,7 +5,7 @@ import GalleryLink from "./components/GalleryLink";
 
 interface Category
 {
-  name: string;
+  key: string;
   videoPath?: string;
   imagePath?: string;
   href: string;
@@ -15,57 +15,57 @@ export default function Home() {
 
   const categories: Category[] = [
     {
-      name: "Visual Effects",
+      key: "Visual Effects",
       href: "/",
       videoPath: "/thumbs/VFX.webm"
     },
     {
-      name: "Shaders",
+      key: "Shaders",
       href: "/",
       videoPath: "/thumbs/Shaders1.webm"
     },
     {
-      name: "One Lonely Outpost",
+      key: "One Lonely Outpost",
       href: "/",
       videoPath: "/thumbs/OLO.webm"
     },
     {
-      name: "3D Models",
+      key: "3D Models",
       href: "/",
       imagePath: "/thumbs/3DModels.png"
     },
     {
-      name: "Steampunk Shinobi",
+      key: "Steampunk Shinobi",
       href: "/",
       videoPath: "/thumbs/SPS.webm"
     },
     {
-      name: "Cel Shading",
+      key: "Cel Shading",
       href: "/",
       videoPath: "/thumbs/CelShader.webm"
     },
     {
-      name: "Water Shaders",
+      key: "Water Shaders",
       href: "/",
       imagePath: "/thumbs/Water.png"
     },
     {
-      name: "Rise of the Third Power",
+      key: "Rise of the Third Power",
       href: "/",
       imagePath: "/thumbs/RiseThirdPower.png"
     },
     {
-      name: "Post Processing",
+      key: "Post Processing",
       href: "/",
       videoPath: "/thumbs/PostProcessing1.webm"
     },
     {
-      name: "Environment and Lighting",
+      key: "Environment and Lighting",
       href: "/",
       videoPath: "/thumbs/EnvLighting.webm"
     },
     {
-      name: "Liquid Simulation",
+      key: "Liquid Simulation",
       href: "/",
       videoPath: "/thumbs/Liquid.webm"
     },
@@ -100,7 +100,7 @@ export default function Home() {
         <p className="mb-16">As for my previous work experiences, I have worked on the RPG <i>Rise of the Third Power</i>, the farming sim <i>One Lonely Outpost</i> and the action adventure game <i>Steampunk Shinobi</i>.</p>
         <div className="grid">
           {categories.map((e, i) => {
-            return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.name} href={e.href}/>
+            return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
           })}
         
         </div>

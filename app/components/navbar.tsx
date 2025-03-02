@@ -10,11 +10,11 @@ function Navbar() {
   const images = [
     {
       img:"/social-media/ArtStation-icon.png",
-      path: "https://www.artstation.com/fr4ct1ons"
+      key: "https://www.artstation.com/fr4ct1ons"
     },
     {
       img:"/social-media/Github-icon.png",
-      path: "https://github.com/fr4ct1ons"
+      key: "https://github.com/fr4ct1ons"
     },
     /*
     {
@@ -24,15 +24,15 @@ function Navbar() {
     */
     {
       img:"/social-media/Sketchfab-icon.png",
-      path: "https://sketchfab.com/fr4ct1ons"
+      key: "https://sketchfab.com/fr4ct1ons"
     },
     {
       img:"/social-media/Twitter-icon.png",
-      path: "https://twitter.com/fr4ct1ons"
+      key: "https://twitter.com/fr4ct1ons"
     },
     {
       img:"/social-media/Bsky-icon.png",
-      path: "https://bsky.app/profile/fr4ct1ons.bsky.social"
+      key: "https://bsky.app/profile/fr4ct1ons.bsky.social"
     },
     
   ]
@@ -47,7 +47,7 @@ function Navbar() {
               <div className={styles.links + " space-x-4"}>
                 {images.map((e, i) => {
                   return (
-                  <Link href={e.path}>
+                  <Link href={e.key}>
                     <Image width={720} height={720} src={e.img} alt={e.img} loading='eager'/>
                   </Link>)
                 })}
