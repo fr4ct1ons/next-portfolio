@@ -6,7 +6,8 @@ import GalleryLink from "./components/GalleryLink";
 interface Category
 {
   name: string;
-  videoPath: string;
+  videoPath?: string;
+  imagePath?: string;
   href: string;
 }
 
@@ -16,8 +17,59 @@ export default function Home() {
     {
       name: "Visual Effects",
       href: "/",
-      videoPath: "/thumbs/Spaceship Thrusters.webm"
-    }
+      videoPath: "/thumbs/VFX.webm"
+    },
+    {
+      name: "Shaders",
+      href: "/",
+      videoPath: "/thumbs/Shaders1.webm"
+    },
+    {
+      name: "One Lonely Outpost",
+      href: "/",
+      videoPath: "/thumbs/OLO.webm"
+    },
+    {
+      name: "3D Models",
+      href: "/",
+      imagePath: "/thumbs/3DModels.png"
+    },
+    {
+      name: "Steampunk Shinobi",
+      href: "/",
+      videoPath: "/thumbs/SPS.webm"
+    },
+    {
+      name: "Cel Shading",
+      href: "/",
+      videoPath: "/thumbs/CelShader.webm"
+    },
+    {
+      name: "Water Shaders",
+      href: "/",
+      imagePath: "/thumbs/Water.png"
+    },
+    {
+      name: "Rise of the Third Power",
+      href: "/",
+      imagePath: "/thumbs/RiseThirdPower.png"
+    },
+    {
+      name: "Post Processing",
+      href: "/",
+      videoPath: "/thumbs/PostProcessing1.webm"
+    },
+    {
+      name: "Environment and Lighting",
+      href: "/",
+      videoPath: "/thumbs/EnvLighting.webm"
+    },
+    {
+      name: "Liquid Simulation",
+      href: "/",
+      videoPath: "/thumbs/Liquid.webm"
+    },
+    
   ]
 
   return(
@@ -39,7 +91,7 @@ export default function Home() {
           </iframe>
         </div>
         <video className="bgVideo" loop muted autoPlay>
-          <source src="/OLO Still.webm" type="video/webm" />
+          <source src="/OLO-Still-Ultrawide.webm" type="video/webm" />
         </video>
       </div>
       <main>
@@ -51,7 +103,7 @@ export default function Home() {
         <h3>Some of my work:</h3>
         <div className="grid">
           {categories.map((e, i) => {
-            return <GalleryLink src={e.videoPath} title={e.name} href={e.href}/>
+            return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.name} href={e.href}/>
           })}
         
         </div>
