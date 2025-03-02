@@ -8,9 +8,18 @@
     justify-content: space-around;
     position: sticky;
     opacity: 1;
+    font-family: Montserrat;
 }
 
 .links
 {
     color: #30ebff;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+
+.links img
+{
+    width: 2rem;
 }

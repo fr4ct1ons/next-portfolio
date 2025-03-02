@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Arimo;
+  src: url(../public/Arimo-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../public/Quicksand-VariableFont_wght.ttf);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,15 +37,20 @@ body {
 
 h1
 {
+  font-family: Montserrat;
   color: #ff5032;
   font-size: 24px;
+}
+
+h2
+{
+  font-family: Montserrat;
 }
 
 main
 {
   margin: auto;
-  margin-top: 8rem;
-  margin-bottom: 500px;
+  margin-top: 4rem;
   width: 1200px;
   max-width: 80%;
   text-align: center;
@@ -68,6 +88,8 @@ p
 {
   font-size: 24px;
   margin-bottom: 1rem;
+  font-family: Quicksand;
+  text-align: left;
 }
 
 h3
@@ -75,6 +97,7 @@ h3
   color: #ff5032;
   font-size: 30px;
   margin-bottom: 2rem;
+  font-family: Montserrat;
 }
 
 .grid
