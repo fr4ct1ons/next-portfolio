@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
 import GalleryLink from "./components/GalleryLink";
+import ScrollForMore from "./components/scrollForMore";
 
 interface Category
 {
@@ -88,6 +89,11 @@ export default function Home() {
             allowFullScreen>
 
           </iframe>
+          
+        </div>
+
+        <div style={{position: "absolute", width: "100%", marginTop: "35%"}}>
+          <ScrollForMore />
         </div>
         <video className="bgVideo" loop muted autoPlay>
           <source src="/OLO-Still-Ultrawide.webm" type="video/webm" />
