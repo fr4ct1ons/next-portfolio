@@ -39,7 +39,7 @@ h1
 {
   font-family: Montserrat;
   color: #ff5032;
-  font-size: 24px;
+  font-size: 48px;
 }
 
 h2
@@ -98,11 +98,4 @@ h3
   font-size: 30px;
   margin-bottom: 2rem;
   font-family: Montserrat;
-}
-
-.grid
-{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 1rem;
 }

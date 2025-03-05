@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "./components/navbar";
 import GalleryLink from "./components/GalleryLink";
 import ScrollForMore from "./components/scrollForMore";
+import styles from "./page.module.css"
 
 interface Category
 {
@@ -67,7 +68,7 @@ export default function Home() {
     },
     {
       key: "Liquid Simulation",
-      href: "/",
+      href: "/liquidSim",
       videoPath: "/thumbs/Liquid.webm"
     },
     
@@ -104,7 +105,7 @@ export default function Home() {
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art and programming in general.</p>
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
         <p className="mb-16">As for my previous work experiences, I have worked on the RPG <i>Rise of the Third Power</i>, the farming sim <i>One Lonely Outpost</i> and the action adventure game <i>Steampunk Shinobi</i>.</p>
-        <div className="grid">
+        <div className={styles.grid}>
           {categories.map((e, i) => {
             return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
           })}
