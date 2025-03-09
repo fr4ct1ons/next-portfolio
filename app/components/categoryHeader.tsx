@@ -23,7 +23,7 @@ function CategoryHeader(props: CategoryHeaderProps)
                 )
                 :
                 (
-                    <Image width={1080} height={1080} alt={props.thumbImage} src={props.thumbImage} loading="eager"/>
+                    <Image width={1080} height={1080} alt={props.thumbImage!} src={props.thumbImage!} loading="eager"/>
                 )
             }
 

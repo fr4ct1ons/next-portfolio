@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import Navbar from "./components/navbar";
 import GalleryLink from "./components/GalleryLink";
 import ScrollForMore from "./components/scrollForMore";
 import styles from "./page.module.css"
@@ -76,6 +74,10 @@ export default function Home() {
 
   return(
     <div>
+      <div className="py-2 bg-red-900">
+        <p className="text-center my-0 text-xl">Hey! This site is still a work in progress. If you want, you can check out my <a className="underline" href="https://fr4ct1ons.github.io/">old portfolio</a> or <a className="underline" href="https://www.artstation.com/fr4ct1ons">ArtStation</a>.</p>
+      </div>
+
       <div className="videoContainer">
         <div className="fgVideo">
           <div>
@@ -106,7 +108,7 @@ export default function Home() {
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
         <p className="mb-16">As for my previous work experiences, I have worked on the RPG <i>Rise of the Third Power</i>, the farming sim <i>One Lonely Outpost</i> and the action adventure game <i>Steampunk Shinobi</i>.</p>
         <div className={styles.grid}>
-          {categories.map((e, i) => {
+          {categories.map((e) => {
             return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
           })}
         

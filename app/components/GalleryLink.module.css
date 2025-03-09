@@ -9,6 +9,11 @@
     text-align: center;
 }
 
+.galleryLink a
+{
+    color: white;
+}
+
 .title
 {
     position: absolute;

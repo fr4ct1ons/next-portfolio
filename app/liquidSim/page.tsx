@@ -1,7 +1,6 @@
 "use client";
 
 import axios from "axios";
-import Image from "next/image";
 import React, { useState } from "react";
 import CategoryHeader from "../components/categoryHeader";
 

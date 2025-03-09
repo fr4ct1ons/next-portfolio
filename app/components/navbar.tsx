@@ -40,7 +40,7 @@ function Navbar() {
   return (
     <div style={{}}>
       <div className={styles.navbar + ' py-4 px-64 space-x-4 max-w-128 min-w-96'}>
-              <Link href={"/"}>Gabriel Lucena</Link>
+              <Link style={{color: "#ff5032"}} href={"/"}>Gabriel Lucena</Link>
               <div className={styles.links + " space-x-16"}>
                 <Link href={"/"}>ABOUT</Link>
                 <div>
@@ -49,7 +49,7 @@ function Navbar() {
                 </div>
               </div>
               <div className={styles.links + " space-x-4"}>
-                {images.map((e, i) => {
+                {images.map((e) => {
                   return (
                   <Link href={e.key}>
                     <Image width={720} height={720} src={e.img} alt={e.img} loading='eager'/>
