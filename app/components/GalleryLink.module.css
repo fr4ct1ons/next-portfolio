@@ -34,3 +34,22 @@
     opacity: 1;
     filter: blur(0);
 }
+
+.titleMobile
+{
+    position: absolute;
+    z-index: 200;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: Montserrat;
+    color: white;
+    width: 100%;
+    opacity: 1;
+    bottom: 0;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+.titleMobile p
+{
+    margin-bottom: 0;
+}

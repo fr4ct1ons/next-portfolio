@@ -1,7 +1,11 @@
+'use client'
+
 import Image from "next/image";
 import GalleryLink from "./components/GalleryLink";
 import ScrollForMore from "./components/scrollForMore";
 import styles from "./page.module.css"
+import { isMobile } from "react-device-detect";
+import { MobileConditionalString, MobileConditionalStyle } from "@/utils/mobileClass";
 
 interface Category
 {
@@ -16,52 +20,52 @@ export default function Home() {
   const categories: Category[] = [
     {
       key: "Visual Effects",
-      href: "/",
+      href: "https://fr4ct1ons.github.io/vfx/",
       videoPath: "/thumbs/VFX.webm"
     },
     {
       key: "Shaders",
-      href: "/",
+      href: "https://fr4ct1ons.github.io/vfx/",
       videoPath: "/thumbs/Shaders1.webm"
     },
     {
       key: "One Lonely Outpost",
-      href: "/",
+      href: "https://fr4ct1ons.github.io/games/one-lonely-outpost/",
       videoPath: "/thumbs/OLO.webm"
     },
     {
       key: "3D Models",
-      href: "/",
+      href: "https://www.artstation.com/fr4ct1ons",
       imagePath: "/thumbs/3DModels.png"
     },
     {
       key: "Steampunk Shinobi",
-      href: "/",
-      videoPath: "/thumbs/SPS.webm"
+      href: "https://store.steampowered.com/app/3284770/Steampunk_Shinobi/",
+      videoPath: "/thumbs/SPS.mp4"
     },
     {
       key: "Cel Shading",
-      href: "/",
+      href: "https://www.artstation.com/artwork/a00YKX",
       videoPath: "/thumbs/CelShader.webm"
     },
     {
       key: "Water Shaders",
-      href: "/",
+      href: "https://www.artstation.com/artwork/mAAAw1",
       imagePath: "/thumbs/Water.png"
     },
     {
       key: "Rise of the Third Power",
-      href: "/",
+      href: "https://fr4ct1ons.github.io/games/rise-third-power/",
       imagePath: "/thumbs/RiseThirdPower.png"
     },
     {
       key: "Post Processing",
-      href: "/",
+      href: "https://fr4ct1ons.github.io/vfx/cyberpunk-camera-zoom-recreation/",
       videoPath: "/thumbs/PostProcessing1.webm"
     },
     {
       key: "Environment and Lighting",
-      href: "/",
+      href: "https://www.artstation.com/artwork/NqqyxD",
       videoPath: "/thumbs/EnvLighting.webm"
     },
     {
@@ -74,20 +78,17 @@ export default function Home() {
 
   return(
     <div>
-      <div className="py-2 bg-red-900">
-        <p className="text-center my-0 text-xl">Hey! This site is still a work in progress. If you want, you can check out my <a className="underline" href="https://fr4ct1ons.github.io/">old portfolio</a> or <a className="underline" href="https://www.artstation.com/fr4ct1ons">ArtStation</a>.</p>
-      </div>
 
       <div className="videoContainer">
         <div className="fgVideo">
           <div>
-            <h1 className="text-7xl mb-8">Hi, I'm Gabriel!</h1>
-            <h2 className="text-2xl">My works over 4+ years as a tech artist</h2>
+            <h1 className={MobileConditionalString("text-4xl mt-[8vw] my-4", "text-7xl mb-8")}>Hi, I'm Gabriel!</h1>
+            <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My works over 4+ years as a tech artist</h2>
           </div>
 
           <iframe className="ytEmbedVideo" src="https://www.youtube.com/embed/Xt-Z47CztaM?si=7-OrD120R5bcFDKY" 
             title="YouTube video player" 
-            style={{width: 640, height:360}}
+            style={MobileConditionalStyle({width: 240, height:135},{width: 640, height:360})}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowFullScreen>
 
@@ -95,19 +96,25 @@ export default function Home() {
           
         </div>
 
+        {isMobile? 
+        ""
+        :
         <div style={{position: "absolute", width: "100%", marginTop: "35%"}}>
           <ScrollForMore />
         </div>
+        }
+        
         <video className="bgVideo" loop muted autoPlay>
-          <source src="/OLO-Still-Ultrawide.webm" type="video/webm" />
+          <source src={MobileConditionalString("/OLO-Still-4x3.webm", "/OLO-Still-Ultrawide.webm")} type="video/webm" />
         </video>
       </div>
       <main>
         <p>Hi there! My name is Gabriel Lucena and I'm a tech artist from Brazil. Welcome to my portfolio!</p>
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art and programming in general.</p>
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
-        <p className="mb-16">As for my previous work experiences, I have worked on the RPG <i>Rise of the Third Power</i>, the farming sim <i>One Lonely Outpost</i> and the action adventure game <i>Steampunk Shinobi</i>.</p>
-        <div className={styles.grid}>
+        <p>As for my previous work experiences, I have worked on the RPG <i><a href="https://store.steampowered.com/app/698700/Rise_of_the_Third_Power/">Rise of the Third Power</a></i>, the farming sim <i><a href="https://store.steampowered.com/app/1465550/One_Lonely_Outpost/">One Lonely Outpost</a></i> and the action adventure game <i><a href="https://store.steampowered.com/app/3284770/Steampunk_Shinobi/">Steampunk Shinobi</a></i>.</p>
+        <p>This site is still a work in progress. If you want, you can check out my <a href="https://fr4ct1ons.github.io/">old portfolio</a> or <a href="https://www.artstation.com/fr4ct1ons">ArtStation</a>.</p>
+        <div className={styles.grid + " mt-16"}>
           {categories.map((e) => {
             return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
           })}

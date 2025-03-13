@@ -63,7 +63,7 @@ main
 
 .fgVideo
 {
-  text-align: left;
+  text-align: center;
   width: 100%;
   margin-left: 10%;
   margin-top: 12vw;
@@ -103,4 +103,43 @@ h3
 a
 {
   color: #30ebff;
+  text-decoration: underline;
+}
+
+.ytEmbedVideo
+{
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px)
+{
+
+  .fgVideo
+  {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    align-items: center;
+  }
+
+  main
+  {
+    width: 92%;
+    max-width: 92%;
+    text-align: center;
+  }
+
+  p
+  {
+    font-size: 18px;
+  }
+
+  h1
+  {
+    font-size: 40px;
+  }
+
 }
