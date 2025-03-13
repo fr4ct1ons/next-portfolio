@@ -104,7 +104,7 @@ export default function Home() {
         </div>
         }
         
-        <video className="bgVideo" loop muted autoPlay>
+        <video className="bgVideo" muted loop autoPlay playsInline poster="/OLO-Still-4x3-Poster.png">
           <source src={MobileConditionalString("/OLO-Still-4x3.webm", "/OLO-Still-Ultrawide.webm")} type="video/webm" />
         </video>
       </div>

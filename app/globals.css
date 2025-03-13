@@ -106,11 +106,6 @@ a
   text-decoration: underline;
 }
 
-.ytEmbedVideo
-{
-  margin: auto;
-}
-
 @media only screen and (max-width: 600px)
 {
 
@@ -140,6 +135,11 @@ a
   h1
   {
     font-size: 40px;
+  }
+  
+  .ytEmbedVideo
+  {
+    margin: auto;
   }
 
 }
