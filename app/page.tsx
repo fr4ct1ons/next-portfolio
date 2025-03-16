@@ -91,10 +91,10 @@ export default function Home() {
             src="https://www.youtube.com/embed/pjLLVKGgQV8?si=vtx63dzzdRtWTSTN" 
             title="YouTube video player" 
             style={MobileConditionalStyle({width: 240, height:135},{width: 640, height:360})}
-            frameborder="0" 
+            frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           >
           </iframe>
           
