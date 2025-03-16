@@ -86,12 +86,16 @@ export default function Home() {
             <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My works over 4+ years as a tech artist</h2>
           </div>
 
-          <iframe className="ytEmbedVideo" src="https://www.youtube.com/embed/Xt-Z47CztaM?si=7-OrD120R5bcFDKY" 
+          <iframe
+            className="ytEmbedVideo" 
+            src="https://www.youtube.com/embed/pjLLVKGgQV8?si=vtx63dzzdRtWTSTN" 
             title="YouTube video player" 
             style={MobileConditionalStyle({width: 240, height:135},{width: 640, height:360})}
+            frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen>
-
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+          >
           </iframe>
           
         </div>
