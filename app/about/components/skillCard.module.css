@@ -1,0 +1,42 @@
+.skillCard
+{
+    position: relative;
+    width: 8rem;
+}
+
+.skillCard img
+{
+    padding: 1rem;
+    position: relative;
+    width: 100%
+}
+
+.skillCard p
+{
+    position: relative;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.text
+{
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: 250ms;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.text:hover
+{
+    opacity: 1;
+}

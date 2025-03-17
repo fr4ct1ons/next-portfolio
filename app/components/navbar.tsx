@@ -56,7 +56,7 @@ function Navbar() {
         (
           <div>
             <div className={styles.links + " space-y-4"}>
-              <Link href={"/"}>ABOUT</Link>
+              <Link href={"/about"}>ABOUT</Link>
               <div className="mx-0">
                 <Link href={""} className='pointer-events-none'>BLOG</Link>
                 <p style={{
@@ -92,7 +92,7 @@ function Navbar() {
       <div className={styles.navbar + ' py-4 px-64 space-x-4 max-w-128 min-w-96'}>
         <Link style={{color: "#ff5032"}} href={"/"}>Gabriel Lucena</Link>
         <div className={styles.links + " space-x-16"}>
-          <Link href={"/"}>ABOUT</Link>
+          <Link href={"/about"}>ABOUT</Link>
           <div>
             <Link href={""} className='pointer-events-none'>BLOG</Link>
             <p style={{
