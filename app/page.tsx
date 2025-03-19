@@ -20,17 +20,17 @@ export default function Home() {
   const categories: Category[] = [
     {
       key: "Visual Effects",
-      href: "https://fr4ct1ons.github.io/vfx/",
+      href: "/vfx",
       videoPath: "/thumbs/VFX.webm"
     },
     {
       key: "Shaders",
-      href: "https://fr4ct1ons.github.io/vfx/",
+      href: "/shaders",
       videoPath: "/thumbs/Shaders1.webm"
     },
     {
       key: "One Lonely Outpost",
-      href: "https://fr4ct1ons.github.io/games/one-lonely-outpost/",
+      href: "/oneLonelyOutpost",
       videoPath: "/thumbs/OLO.webm"
     },
     {
