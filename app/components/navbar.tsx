@@ -38,6 +38,10 @@ function Navbar() {
       img:"/social-media/Bsky-icon.png",
       key: "https://bsky.app/profile/fr4ct1ons.bsky.social"
     },
+    {
+      img:"/social-media/LinkedIn-icon.png",
+      key: "https://www.linkedin.com/in/gabriel-lucena-405a551b6/"
+    },
     
   ]
 
