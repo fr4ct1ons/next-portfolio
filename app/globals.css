@@ -91,6 +91,7 @@ h3
   color: #ff5032;
   font-size: 42px;
   margin-bottom: 2rem;
+  margin-top: 4rem;
   font-family: Montserrat;
 }
 
@@ -98,6 +99,18 @@ a
 {
   color: #30ebff;
   text-decoration: underline;
+}
+
+.ytVideo
+{
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 960px;
+
+  height: 1080px;
+  max-height: 540px;
 }
 
 @media only screen and (max-width: 600px)

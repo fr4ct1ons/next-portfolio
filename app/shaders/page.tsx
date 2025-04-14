@@ -19,7 +19,7 @@ function Shaders() {
 
     return (
       <main>
-          <CategoryHeader thumbVideo="/thumbs/VFX.webm" title="Shaders" >
+          <CategoryHeader thumbVideo="/thumbs/Shaders1.webm" title="Shaders" >
             <p>These are some shaders I have created. They were created in Unreal and Unity.</p>
           </CategoryHeader>
           <ProduceGalleryPage entries={data} />

@@ -4,7 +4,7 @@ import React from 'react'
 interface CategoryHeaderProps
 {
     title: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     thumbImage?: string;
     thumbVideo?: string;
 }
