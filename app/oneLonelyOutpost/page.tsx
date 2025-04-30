@@ -47,7 +47,7 @@ function OneLonelyOutpost() {
                 Because the overworld of the game maps uses 3D models instead of something like Unity terrain, the vegetation is generated separately on <b>Blender, using its particle system</b>.
             </p>
             <iframe className="ytVideo" 
-            src="https://www.youtube.com/embed/C64_-ZCLWBE?si=fTyErp_0Zl_KxROi" 
+            src="https://www.youtube.com/embed/dEW2W1ZhPHA?si=AQL8NulQSI_JsolP" 
             title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen></iframe>
@@ -57,7 +57,7 @@ function OneLonelyOutpost() {
                 This is the end result.
             </p>
             <iframe className="ytVideo" 
-            src="https://www.youtube.com/embed/C64_-ZCLWBE?si=fTyErp_0Zl_KxROi" 
+            src="https://www.youtube.com/embed/T0imec9BRq4?si=-DAY3zcCdQYS_WRO" 
             title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen></iframe>

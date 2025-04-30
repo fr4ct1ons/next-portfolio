@@ -28,8 +28,13 @@ export default function Home() {
       videoPath: "/thumbs/Shaders1.webm"
     },
     {
+      key: "Tools",
+      href: "/tools",
+      imagePath: "/thumbs/CodeNTools.png"
+    },
+    {
       key: "3D Models",
-      href: "https://www.artstation.com/fr4ct1ons",
+      href: "https://sketchfab.com/fr4ct1ons",
       imagePath: "/thumbs/3DModels.png"
     },
     
@@ -42,7 +47,7 @@ export default function Home() {
         <div className="fgVideo">
           <div>
             <h1 className={MobileConditionalString("text-4xl mt-[8vw] my-4", "text-7xl mb-8")}>Hi, I'm Gabriel!</h1>
-            <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My works over 4+ years as a tech artist</h2>
+            <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My work over 5+ years as a tech artist</h2>
           </div>
 
           <iframe
@@ -75,7 +80,7 @@ export default function Home() {
         <p>Hi there! My name is Gabriel Lucena and I'm a tech artist from Brazil. Welcome to my portfolio!</p>
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art, programming and rendering in general. You can read more about me on the <a href="/about">About</a> page.</p>
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
-        <p>As for my previous work experiences, I have worked on the RPG <i><a href="https://store.steampowered.com/app/698700/Rise_of_the_Third_Power/">Rise of the Third Power</a></i>, the farming sim <i><a href="https://store.steampowered.com/app/1465550/One_Lonely_Outpost/">One Lonely Outpost</a></i> and the action adventure game <i><a href="https://store.steampowered.com/app/3284770/Steampunk_Shinobi/">Steampunk Shinobi</a></i>.</p>
+        <p>As for my previous work experiences, I have worked on the RPG <i><a href="https://store.steampowered.com/app/698700/Rise_of_the_Third_Power/">Rise of the Third Power</a></i>, the farming sim <i><a href="https://store.steampowered.com/app/1465550/One_Lonely_Outpost/">One Lonely Outpost</a></i> and the action adventure game <i><a href="https://store.steampowered.com/app/3284770/Steampunk_Shinobi/">Steampunk Shinobi</a></i>. For more, check out the <a href="/about">about</a> page.</p>
         <p>This site is still a work in progress. If you want, you can check out my <a href="https://fr4ct1ons.github.io/">old portfolio</a> or <a href="https://www.artstation.com/fr4ct1ons">ArtStation</a>.</p>
 
         <h3>Previous works</h3>

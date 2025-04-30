@@ -1,0 +1,74 @@
+.videoPopup
+{
+    position: fixed;
+    
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.foreground
+{
+    position: relative;
+    height: 90%;
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 16px;
+    border: 4px solid #363636;
+    background-color: rgb(18, 18, 18);
+    z-index: 2010;
+}
+
+.foreground video
+{
+    background-color: black;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+
+/*
+flex justify-between align-center my-8 mx-[12rem] w-[100%]
+*/
+.toolbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 75%;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .toolbar
+    {
+        margin-left: .5rem;
+        margin-right: .5rem;
+        width: 90%;
+    }
+
+    .foreground
+    {
+        margin-top: 50%;
+        height: 40%;
+    }
+
+    .foreground video
+    {
+        height: auto;
+        width: 95%;
+    }
+
+}

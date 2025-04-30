@@ -1,5 +1,7 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { MobileConditionalString } from "./mobileClass";
+import VideoPopup from "@/app/components/videoPopup";
+import styles from "./produceGallery.module.css"
 
 export function ProduceGalleryPage(props: {entries: CategoryEntry[]} )
 {
@@ -8,94 +10,80 @@ export function ProduceGalleryPage(props: {entries: CategoryEntry[]} )
     }, [props.entries])
 
     let components: ReactNode;
-    if(props.entries.length < 5)
-    {
-        components = props.entries.map((e) => {
-            if(!e.imgPath && !e.webmPath)
-            {
-                return undefined;
-            }
-            let href = e.path
-            if(!e.path)
-            {
-                href = e.imgPath? e.imgPath : e.webmPath
-            }
-
-            if(e.imgPath)
-            {
-                return (
-                    <a href={href}>
-                        <img alt={e.imgPath} src={e.imgPath} />
-                    </a>
-                )
-            }
-            
-            return(
-                <a href={href}>
-                    <video loop muted autoPlay>
-                        <source src={e.webmPath} type="video/webm" />
-                    </ video>
-                </a>
-            )
-        })
-
-        components = (
-            <div className="mt-16 grid grid-cols-2 gap-4">
-                {components}
-            </div>
-        )
-
-        return components;
-    }
-    else
+    
+    if(props.entries.length <= 0)
     {
         
-        let 
-        c1: ReactNode[] = [], 
-        c2: ReactNode[] = []
-        let ci = 0
-        let component: ReactNode;
-        for (let i = 0; i < props.entries.length; i++) {
-            component = <ProduceGalleryItem entry={props.entries[i]}  />
+        return(
+            <div>
+                <div className={ styles.loader }>
 
-            switch (ci) {
-                case 0:
-                    c1.push(component)
-                    break;
-                case 1:
-                    c2.push(component)
-                    break;
-                default:
-                    break;
-            }
-
-            ci = (ci+1) % 2;
-            
-        }
-
-        return (
-        <div style={{display: 'flex', justifyContent: "space-evenly", marginTop: "4rem"}}>
-            <div style={{width: "46%"}}>
-                {c1}
+                </div>
+                <p style={{textAlign: "center", marginTop: "2rem"}}>Loading...</p>
             </div>
-            <div style={{width: "46%"}}>
-                {c2}
-            </div>
-        </div>
         )
     }
+
+    let 
+    c1: ReactNode[] = [], 
+    c2: ReactNode[] = []
+    let ci = 0
+    let component: ReactNode;
+    for (let i = 0; i < props.entries.length; i++) {
+        component = <ProduceGalleryItem entry={props.entries[i]}  />
+
+        switch (ci) {
+            case 0:
+                c1.push(component)
+                break;
+            case 1:
+                c2.push(component)
+                break;
+            default:
+                break;
+        }
+
+        ci = (ci+1) % 2;
+        
+    }
+
+    return (
+    <div style={{display: 'flex', justifyContent: "space-evenly", marginTop: "4rem"}}>
+        <div style={{width: "46%"}}>
+            {c1}
+        </div>
+        <div style={{width: "46%"}}>
+            {c2}
+        </div>
+    </div>
+    )
+    
 }
 
 export function ProduceGalleryItem(props: {entry: CategoryEntry})
 {
+    const [popupOpen, setPopupOpen] = useState(false)
     if(!props.entry.imgPath && !props.entry.webmPath)
     {
         return undefined;
     }
     let href = props.entry.path
+    let onClick = () => {}
     if(!props.entry.path)
     {
         href = props.entry.imgPath? props.entry.imgPath : props.entry.webmPath
+        if(props.entry.webmPath)
+        {
+            href = undefined;
+            onClick = () => {
+                console.log("Popup should be open)")
+                setPopupOpen(true);
+            }
+        }
+        else
+        {
+            href = props.entry.imgPath;
+        }
     }
 
     if(props.entry.imgPath)
@@ -108,10 +96,18 @@ export function ProduceGalleryItem(props: {entry: CategoryEntry})
     }
     
     return(
-        <a style={{marginBottom: "2rem"}} href={href}>
+        <>
+        <a style={{marginBottom: "2rem", cursor: "pointer"}} onClick={onClick} href={href}>
             <video className={MobileConditionalString("mb-4", "mb-8")} loop muted autoPlay>
                 <source src={props.entry.webmPath} type="video/webm" />
             </ video>
+            
         </a>
+        {props.entry.webmPath? 
+        <VideoPopup videoPath={props.entry.webmPath} isPopupOpen={popupOpen} setPopupOpen={setPopupOpen} />
+        :
+        ""
+        }
+        </>
     )
 }

@@ -23,7 +23,7 @@ function CategoryHeader(props: CategoryHeaderProps)
                 )
                 :
                 (
-                    <Image width={1080} height={1080} alt={props.thumbImage!} src={props.thumbImage!} loading="eager"/>
+                    <Image className='w-[60%] mx-auto my-8' width={1080} height={1080} alt={props.thumbImage!} src={props.thumbImage!} loading="eager"/>
                 )
             }
 
