@@ -1,19 +1,20 @@
 "use client";
 
-import axios from 'axios'
 import React, { useState } from 'react'
 import CategoryHeader from '../components/categoryHeader'
 import { ProduceGalleryPage } from '@/utils/produceGallery'
+import { contentfulClient } from '@/utils/contentful/contentful';
 
 function Shaders() {
-    const [data, setData] = useState<CategoryEntry[]>([])
+    const [data, setData] = useState<ContentfulGalleryItem[]>([])
 
     if(data.length <= 0)
     {
-        axios.get("https://raw.githubusercontent.com/fr4ct1ons/portfolio-contents/refs/heads/main/Shaders/Shaders.json")
+      contentfulClient.getEntry("4r9AVWX55sPEcX9m703qT")
         .then((e) => 
         {
-            setData(e.data)
+          const entries: ContentfulGalleryItem[] = e.fields.media as ContentfulGalleryItem[]
+          setData(entries)
         })
     }
 

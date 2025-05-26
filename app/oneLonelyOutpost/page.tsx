@@ -3,17 +3,18 @@
 import React, { useState } from 'react'
 import CategoryHeader from '../components/categoryHeader'
 import { ProduceGalleryPage } from '@/utils/produceGallery'
-import axios from 'axios'
+import { contentfulClient } from '@/utils/contentful/contentful';
 
 function OneLonelyOutpost() {
-    const [data, setData] = useState<CategoryEntry[]>([])
+    const [data, setData] = useState<ContentfulGalleryItem[]>([])
 
     if(data.length <= 0)
     {
-        axios.get("https://raw.githubusercontent.com/fr4ct1ons/portfolio-contents/refs/heads/main/OLO/OLO.json")
+        contentfulClient.getEntry("6lq1lUwxUAeacRPXJApXxq")
         .then((e) => 
         {
-            setData(e.data)
+            const entries: ContentfulGalleryItem[] = e.fields.media as ContentfulGalleryItem[]
+            setData(entries)
         })
     }
 

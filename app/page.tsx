@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       key: "3D Models",
-      href: "https://sketchfab.com/fr4ct1ons",
+      href: "/3dModels",
       imagePath: "/thumbs/3DModels.png"
     },
     

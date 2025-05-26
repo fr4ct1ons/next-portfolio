@@ -3,7 +3,7 @@ import { MobileConditionalString } from "./mobileClass";
 import VideoPopup from "@/app/components/videoPopup";
 import styles from "./produceGallery.module.css"
 
-export function ProduceGalleryPage(props: {entries: CategoryEntry[]} )
+export function ProduceGalleryPage(props: {entries: ContentfulGalleryItem[]} )
 {
     useEffect(() => {
 
@@ -60,37 +60,39 @@ export function ProduceGalleryPage(props: {entries: CategoryEntry[]} )
     
 }
 
-export function ProduceGalleryItem(props: {entry: CategoryEntry})
+export function ProduceGalleryItem(props: {entry: ContentfulGalleryItem})
 {
     const [popupOpen, setPopupOpen] = useState(false)
-    if(!props.entry.imgPath && !props.entry.webmPath)
+
+    let fields = props.entry.fields
+    if(!fields.file && !fields.file)
     {
         return undefined;
     }
-    let href = props.entry.path
+    let href = fields.description
     let onClick = () => {}
-    if(!props.entry.path)
+    if(!fields.description)
     {
-        href = props.entry.imgPath? props.entry.imgPath : props.entry.webmPath
-        if(props.entry.webmPath)
+        href = fields.file.url
+        if(fields.file.contentType.includes("video"))
         {
             href = undefined;
             onClick = () => {
-                console.log("Popup should be open)")
+                console.log("(Popup should be open)")
                 setPopupOpen(true);
             }
         }
         else
         {
-            href = props.entry.imgPath;
+            href = fields.file.url;
         }
     }
 
-    if(props.entry.imgPath)
+    if(!fields.file.contentType.includes("video"))
     {
         return (
             <a href={href}>
-                <img alt={props.entry.imgPath} src={props.entry.imgPath} />
+                <img alt={href} src={fields.file.url} />
             </a>
         )
     }
@@ -99,12 +101,11 @@ export function ProduceGalleryItem(props: {entry: CategoryEntry})
         <>
         <a style={{marginBottom: "2rem", cursor: "pointer"}} onClick={onClick} href={href}>
             <video className={MobileConditionalString("mb-4", "mb-8")} loop muted autoPlay>
-                <source src={props.entry.webmPath} type="video/webm" />
+                <source src={fields.file.url} type="video/webm" />
             </ video>
-            
         </a>
-        {props.entry.webmPath? 
-        <VideoPopup videoPath={props.entry.webmPath} isPopupOpen={popupOpen} setPopupOpen={setPopupOpen} />
+        {fields.file.url? 
+        <VideoPopup videoPath={fields.file.url} isPopupOpen={popupOpen} setPopupOpen={setPopupOpen} />
         :
         ""
         }

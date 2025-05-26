@@ -13,30 +13,30 @@ interface VideoPopupProps
 function VideoPopup(props: VideoPopupProps) {
     
 
-    if(!props.isPopupOpen)
-    {
-        return;
-    }
-
+    
     useEffect(() => {
-        function onkeyDown(e: KeyboardEvent)
-        {
-            if(e.key == "Escape")
+    function onkeyDown(e: KeyboardEvent)
+    {
+        if(e.key == "Escape")
             {
                 props.setPopupOpen(false)
             }
         }
-
+        
         document.addEventListener("keydown", onkeyDown);
-
+        
         return function cleanup()
         {
             document.removeEventListener("keydown", onkeyDown)
         }
     }, [props.isPopupOpen])
-
+    
+    if(!props.isPopupOpen)
+    {
+        return;
+    }
     return (
-        <div onKeyDown={(e) => e.key == "esc"?console.log("Hello!!!!") : "" } className={styles.videoPopup} onClick={() => {console.log("clossss"); props.setPopupOpen(false)}}>
+        <div onKeyDown={(e) => e.key == "esc"?console.log("") : "" } className={styles.videoPopup} onClick={() => {console.log(""); props.setPopupOpen(false)}}>
             <div onClick={(e) => {e.stopPropagation()}} className={styles.foreground}>
                 <div className={styles.toolbar}>
                     <p>{props.videoName}</p>

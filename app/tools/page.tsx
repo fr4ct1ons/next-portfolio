@@ -2,25 +2,19 @@
 
 import React, { useState } from 'react'
 import CategoryHeader from '../components/categoryHeader'
-import axios from 'axios';
 import { ProduceGalleryPage } from '@/utils/produceGallery';
+import { contentfulClient } from '@/utils/contentful/contentful';
 
 function Tools() {
-    const [data, setData] = useState<CategoryEntry[]>([])
+    const [data, setData] = useState<ContentfulGalleryItem[]>([])
 
-    if(data.length <= 0)
+    if(data != undefined && data.length <= 0)
     {
-        axios.get("https://raw.githubusercontent.com/fr4ct1ons/portfolio-contents/refs/heads/main/ToolsAndCode/ToolsAndCode.json")
+        contentfulClient.getEntry("2UkBXJiw56j6QohWblFJOB")
         .then((e) => 
         {
-            if(data.length <= 0)
-            {
-                setTimeout(() => setData(e.data), 3000)
-            }
-            else
-            {
-                setData(e.data)
-            }
+            const entries: ContentfulGalleryItem[] = e.fields.media as ContentfulGalleryItem[]
+            setData(entries)
         })
     }
 
