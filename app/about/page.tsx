@@ -69,15 +69,17 @@ function About() {
 
         <ul className={style.list}>
             <li>Visual Effects</li>
+            <li>Shader programming</li>
             <li>Tool Development</li>
             <li>3D modelling</li>
-            <li>Unity Multiplayer w/ Mirror</li>
+            <li>Multiplayer basics</li>
             <li>Lighting</li>
             <li>Procedural mesh generation</li>
             <li>Texturing & UV Mapping</li>
             <li>UI Programming</li>
             <li>Basic 3D animation & rigging</li>
             <li>Design patterns & SOLID</li>
+            <li>Virtual Reality</li>
         </ul>
 
 
