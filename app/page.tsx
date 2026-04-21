@@ -94,7 +94,7 @@ export default function Home() {
         <h3>Personal projects</h3>
         <div className={styles.grid}>
           {categories.map((e) => {
-            return <GalleryLink videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
+            return <GalleryLink key={e.key} videoSrc={e.videoPath} imageSrc={e.imagePath} title={e.key} href={e.href}/>
           })}
         
         </div>
