@@ -113,6 +113,15 @@ a
   max-height: 540px;
 }
 
+.ytVideoRow
+{
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 960px;
+}
+
 @media only screen and (max-width: 600px)
 {
 

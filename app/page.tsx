@@ -85,6 +85,7 @@ export default function Home() {
 
         <h3>Previous works</h3>
         <div className={styles.grid}>
+          <GalleryLink videoSrc={"/thumbs/CombotronicaThumb.webm"} title={"Combotronica"} href={"/combotronica"}/>
           <GalleryLink videoSrc={"/thumbs/OLO.webm"} title={"One Lonely Outpost"} href={"/oneLonelyOutpost"}/>
           <GalleryLink videoSrc={"/thumbs/SPS.mp4"} title={"Steampunk Shinobi"} href={"https://store.steampowered.com/app/3284770/Steampunk_Shinobi/"}/>
           <GalleryLink imageSrc={"/thumbs/RiseThirdPower.png"} title={"Rise of the Third Power"} href={"https://fr4ct1ons.github.io/games/rise-third-power/"}/>

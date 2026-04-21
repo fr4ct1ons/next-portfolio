@@ -30,7 +30,7 @@ export function ProduceGalleryPage(props: {entries: ContentfulGalleryItem[]} )
     let ci = 0
     let component: ReactNode;
     for (let i = 0; i < props.entries.length; i++) {
-        component = <ProduceGalleryItem entry={props.entries[i]}  />
+        component = <ProduceGalleryItem entry={props.entries[i] } alignRight={ci==0}  />
 
         switch (ci) {
             case 0:
@@ -49,7 +49,7 @@ export function ProduceGalleryPage(props: {entries: ContentfulGalleryItem[]} )
 
     return (
     <div style={{display: 'flex', justifyContent: "space-evenly", marginTop: "4rem"}}>
-        <div style={{width: "46%"}}>
+        <div style={{width: "46%", textAlign: "left"}}>
             {c1}
         </div>
         <div style={{width: "46%"}}>
@@ -60,7 +60,7 @@ export function ProduceGalleryPage(props: {entries: ContentfulGalleryItem[]} )
     
 }
 
-export function ProduceGalleryItem(props: {entry: ContentfulGalleryItem})
+export function ProduceGalleryItem(props: {entry: ContentfulGalleryItem, alignRight?: boolean})
 {
     const [popupOpen, setPopupOpen] = useState(false)
 
@@ -99,7 +99,7 @@ export function ProduceGalleryItem(props: {entry: ContentfulGalleryItem})
     
     return(
         <>
-        <a style={{marginBottom: "2rem", cursor: "pointer"}} onClick={onClick} href={href}>
+        <a style={{marginBottom: "2rem", cursor: "pointer", display: "flex", justifyContent: props.alignRight? "right" : "left"}} onClick={onClick} href={href}>
             <video className={MobileConditionalString("mb-4", "mb-8")} loop muted autoPlay>
                 <source src={fields.file.url} type="video/webm" />
             </ video>

@@ -85,6 +85,10 @@ function About() {
 
         <h3>Work experience</h3>
 
+        <WorkCard imgHref="https://store.steampowered.com/app/3902340/COMBOTRONICA/" duration="Aug. 2025 - Mar. 2026" game='COMBOTRONICA' studio='Grid Cortex Games' imgSrc='/games/CMB.jpg'>
+            <p>Worked as Tech Artist, working mainly w/ VFX, shaders, lighting etc. for attacks & skills, as well as environment</p> 
+        </WorkCard>
+        
         <WorkCard imgHref="https://store.steampowered.com/app/3284770/Steampunk_Shinobi/" duration="Nov. 2023 - Jul. 2024" game='Steampunk Shinobi' studio='Vagabond Games' imgSrc='/games/SPS.jpg'>
             <p>Worked as Tech Artist, working mainly w/ VFX, shaders, lighting etc. for attacks & skills, as well as environment</p>
         </WorkCard>
