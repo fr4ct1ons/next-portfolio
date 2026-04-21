@@ -80,15 +80,15 @@ export default function Home() {
         <p>Hi there! My name is Gabriel Lucena and I'm a tech artist from Brazil. Welcome to my portfolio!</p>
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art, programming and rendering in general. You can read more about me on the <a href="/about">About</a> page.</p>
         <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
-        <p>As for my previous work experiences, I have worked on the RPG <i><a href="https://store.steampowered.com/app/698700/Rise_of_the_Third_Power/">Rise of the Third Power</a></i>, the farming sim <i><a href="https://store.steampowered.com/app/1465550/One_Lonely_Outpost/">One Lonely Outpost</a></i> and the action adventure game <i><a href="https://store.steampowered.com/app/3284770/Steampunk_Shinobi/">Steampunk Shinobi</a></i>. For more, check out the <a href="/about">about</a> page.</p>
-        <p>This site is still a work in progress. If you want, you can check out my <a href="https://fr4ct1ons.github.io/">old portfolio</a> or <a href="https://www.artstation.com/fr4ct1ons">ArtStation</a>.</p>
+        <p>As for my previous work experiences, my most recent project is <i><a href="/combotronica">COMBOTRONICA</a></i>, but I have also worked on the RPG <i><a href="/riseOfTheThirdPower">Rise of the Third Power</a></i>, the farming sim <i><a href="/oneLonelyOutpost">One Lonely Outpost</a></i> and the action adventure game <i><a href="/steampunkShinobi">Steampunk Shinobi</a></i>. For more, check out the <a href="/about">about</a> page.</p>
+        <p>Feel free to also check me out on <a href="https://www.artstation.com/fr4ct1ons">ArtStation</a>, <a href="https://github.com/fr4ct1ons">GitHub</a> or to follow me on <a href="https://bsky.app/profile/fr4ct1ons.bsky.social">Bluesky</a>!</p>
 
         <h3>Previous works</h3>
         <div className={styles.grid}>
           <GalleryLink videoSrc={"/thumbs/CombotronicaThumb.webm"} title={"Combotronica"} href={"/combotronica"}/>
           <GalleryLink videoSrc={"/thumbs/OLO.webm"} title={"One Lonely Outpost"} href={"/oneLonelyOutpost"}/>
-          <GalleryLink videoSrc={"/thumbs/SPS.mp4"} title={"Steampunk Shinobi"} href={"https://store.steampowered.com/app/3284770/Steampunk_Shinobi/"}/>
-          <GalleryLink imageSrc={"/thumbs/RiseThirdPower.png"} title={"Rise of the Third Power"} href={"https://fr4ct1ons.github.io/games/rise-third-power/"}/>
+          <GalleryLink videoSrc={"/thumbs/SPS.mp4"} title={"Steampunk Shinobi"} href={"/steampunkShinobi"}/>
+          <GalleryLink imageSrc={"/thumbs/RiseThirdPower.png"} title={"Rise of the Third Power"} href={"/riseOfTheThirdPower"}/>
         </div>
 
         <h3>Personal projects</h3>

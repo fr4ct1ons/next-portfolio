@@ -21,7 +21,7 @@ function Shaders() {
     return (
       <main>
           <CategoryHeader thumbVideo="/thumbs/Shaders1.webm" title="Shaders" >
-            <p>These are some shaders I have created. They were created in Unreal and Unity.</p>
+            <p>These are some shaders I have created. They were created in Unreal, Unity and Godot.</p>
           </CategoryHeader>
           <ProduceGalleryPage entries={data} />
       </main>

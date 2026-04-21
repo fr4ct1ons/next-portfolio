@@ -112,7 +112,7 @@ function Navbar() {
         <div className={styles.links + " space-x-4"}>
           {images.map((e) => {
             return (
-            <Link href={e.key}>
+            <Link key={e.key} href={e.key}>
               <Image width={720} height={720} src={e.img} alt={e.img} loading='eager'/>
             </Link>)
           })}

@@ -61,7 +61,7 @@ function About() {
         {
             skills.map((e) => 
                 {
-                    return (<SkillCard name={e.key} imageSrc={e.src} />)
+                    return (<SkillCard key={e.key} name={e.key} imageSrc={e.src} />)
                 }
             )
         }
@@ -105,7 +105,7 @@ function About() {
         <h3>Education</h3>
 
         <EducationItem period='2018-2022' institution='Universidade Federal do Rio Grande do Norte' title='B.S., Information Technology' />
-        <EducationItem period='2024-Ongoing' institution='Universidade Federal do Rio Grande do Norte' title="Master's, Information Technology" />
+        {/*<EducationItem period='2024-Ongoing' institution='Universidade Federal do Rio Grande do Norte' title="Master's, Information Technology" />*/}
         
     </main>
   )

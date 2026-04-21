@@ -22,7 +22,7 @@ function Combotronica() {
     return (
     <main>
         <CategoryHeader thumbVideo="/thumbs/CombotronicaFullVideo.webm" title="Combotronica" />
-            <p>COMBOTRONICA is a 2D roguelike deck-building game where you must build chains of tiles with similar numbers or colors, where you can buy items to improve your deck and game run. It's currently available on Steam.</p>
+            <p>COMBOTRONICA is a 2D roguelike deck-building game where you must build chains of tiles with similar numbers or colors, where you can buy items to improve your deck and game run. It's currently available on <a href="https://store.steampowered.com/app/3902340/COMBOTRONICA/">Steam</a>.</p>
             <p>In this game, I worked as a tech artist, from August 2025 to March 2026. I worked with shaders, visual effects, animations, user interface. I also helped with coding when needed. Here is some of my work on this project.</p>
             <p>One of my first works I made in this project was the amulet destruction visual effect. It uses a custom shader applied on the amulet sprite and on its shadow.
                 Being one of my first visual effects, I was still getting used to the project - In this case, I was getting used to the customized animation system.
