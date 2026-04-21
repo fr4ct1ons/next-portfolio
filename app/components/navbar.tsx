@@ -51,7 +51,7 @@ function Navbar() {
       <div style={{}}>
         <div className={styles.navbar + ' py-4 space-x-2'}>
           <Link style={{color: "#ff5032"}} href={"/"}>Gabriel Lucena</Link>
-          <img className='h-8' src='/menu-icon.svg' onClick={() => setMenuOpen(!menuOpen)} />
+          <img className='h-8' src='/menu-icon.svg' alt="Menu" onClick={() => setMenuOpen(!menuOpen)} />
         </div>
 
         { !menuOpen? 

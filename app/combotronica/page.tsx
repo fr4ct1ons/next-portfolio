@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import CategoryHeader from '../components/categoryHeader'
 import { ProduceGalleryPage } from '@/utils/produceGallery'
 import { contentfulClient } from '@/utils/contentful/contentful';
-import { log } from 'console';
 
 function Combotronica() {
     const [data, setData] = useState<ContentfulGalleryItem[]>([])
