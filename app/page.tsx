@@ -25,7 +25,7 @@ export default function Home() {
     {
       key: "Shaders",
       href: "/shaders",
-      videoPath: "/thumbs/Shaders1.webm"
+      videoPath: "/thumbs/Liquid.webm"
     },
     {
       key: "Tools",
