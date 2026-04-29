@@ -52,7 +52,7 @@ export default function Home() {
 
           <iframe
             className="ytEmbedVideo"
-            src="https://www.youtube.com/embed/pjLLVKGgQV8?si=vtx63dzzdRtWTSTN"
+            src="https://www.youtube.com/embed/UA0b_na1ZHs?si=K8YU7GgwMj4TZAYd"
             title="YouTube video player"
             style={MobileConditionalStyle({width: 240, height:135},{width: 640, height:360})}
             frameBorder="0"
@@ -79,7 +79,7 @@ export default function Home() {
       <main>
         <p>Hi there! My name is Gabriel Lucena and I'm a tech artist from Brazil. Welcome to my portfolio!</p>
         <p>I'm a tech artist with experience working on shaders, lighting and visual effects, though I enjoy art, programming and rendering in general. You can read more about me on the <a href="/about">About</a> page.</p>
-        <p>I have a bachelor's degree in Information Technology and am pursuing a Master's in Information Technology. I have experience with Unity, Unreal and web development, as well as C# and C++.</p>
+        <p>I have a bachelor's degree in Information Technology and experience with Unity, Unreal and web development, as well as C#, C++ and Python.</p>
         <p>As for my previous work experiences, my most recent project is <i><a href="/combotronica">COMBOTRONICA</a></i>, but I have also worked on the RPG <i><a href="/riseOfTheThirdPower">Rise of the Third Power</a></i>, the farming sim <i><a href="/oneLonelyOutpost">One Lonely Outpost</a></i> and the action adventure game <i><a href="/steampunkShinobi">Steampunk Shinobi</a></i>. For more, check out the <a href="/about">about</a> page.</p>
         <p>Feel free to also check me out on <a href="https://www.artstation.com/fr4ct1ons">ArtStation</a>, <a href="https://github.com/fr4ct1ons">GitHub</a> or to follow me on <a href="https://bsky.app/profile/fr4ct1ons.bsky.social">Bluesky</a>!</p>
 

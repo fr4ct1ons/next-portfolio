@@ -53,7 +53,7 @@ function About() {
         <p>I am Gabriel Lucena, a tech artist from Natal, RN, Brazil, where I also currently live. I have 5 years of work experience as tech artist.</p>
         <p>Currently, I work as a VR/XR Development lead at AKCIT {"(Advanced Knowledge Center for Immersive Technologies)"}, at the local college, but I've worked as Tech Artist on <i>COMBOTRONICA</i>, <i>One Lonely Outpost</i>, <i>Steampunk Shinobi</i> and as a VFX Artist on <i>Rise of the Third Power</i>.</p>
         <p>As a tech artist, my main specialties are visual effects, shaders, lighting, post processing and rendering, though I also work with 3D modelling/texturing, programming and setting up animations in-engine.</p>
-        <p>Additionally, I'm pursuing a Master's in Information Technology, in which I'm researching the implementation of a cel shader in Unreal Engine 5. I also have a Bachelor's in I.T., which I studied from 2018 to 2022.</p>
+        <p>When it comes to my education, I have a Bachelor's in I.T., which I studied from 2018 to 2022.</p>
         <p>I speak english and portuguese fluently, and I also have been taking french lessons and can speak basic french.</p>
         
         <h3>Tools & Skills</h3>
@@ -118,6 +118,10 @@ function About() {
             <p>In 2025, I submitted a poster for SIGGRAPH Asia 2025 on Cel-Shading in Unreal Engine 5 and it was one of the selected works, so I had the privilege of showcasing it in Hong Kong for the duration of the event.</p>
             <p>Fore more info, please check out the GitHub repo. If that link doesn't work, you need to join the <a href='https://dev.epicgames.com/documentation/unreal-engine/downloading-source-code-in-unreal-engine'>Epic Games organization on GitHub.</a></p>
             <p>Lins: <a href="https://github.com/fr4ct1ons/UnrealEngineCelShader">GitHub repo</a> - <a href="https://youtu.be/l75HxZnkJ_0">YouTube Demo</a> - <a href="https://dl.acm.org/doi/10.1145/3757374.3771456">Poster on ACM DL</a></p>
+        </RelevantInfo>
+
+        <RelevantInfo title="Cambridge English C1 Advanced">
+            <p>Scored 198 in my Cambridge English Assessment <a href="https://www.cambridgeenglish.org/exams-and-tests/qualifications/advanced/">C1 Advanced</a> test. The result was issued on June 2025.</p>
         </RelevantInfo>
     </main>
   )
