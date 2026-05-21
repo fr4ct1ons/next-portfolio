@@ -99,6 +99,13 @@ export default function Home() {
         
         </div>
 
+        <h3>Projects by stack</h3>
+        <div className={styles.grid}>
+          <GalleryLink imageSrc={"/thumbs/ProjectsUnreal.png"} title={"Unreal"} href={"/projectsUnreal"}/>
+          <GalleryLink imageSrc={"/thumbs/ProjectsUnity.png"} title={"Unity"} href={"/projectsUnity"}/>
+          <GalleryLink imageSrc={"/thumbs/ProjectsGodot.png"} title={"Godot"} href={"/projectsGodot"}/>
+        </div>
+
       </main>
     </div>
   )

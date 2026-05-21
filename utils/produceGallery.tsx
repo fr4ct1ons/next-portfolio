@@ -92,7 +92,7 @@ export function ProduceGalleryItem(props: {entry: ContentfulGalleryItem, alignRi
     {
         return (
             <a href={href}>
-                <img alt={href} src={fields.file.url} />
+                <img alt={href} src={fields.file.url} style={{marginBottom: "4rem"}} />
             </a>
         )
     }
