@@ -18,6 +18,11 @@ export default function Home() {
 
   const categories: Category[] = [
     {
+      key: "Project XSP (Unreal game)",
+      href: "/project-xsp",
+      videoPath: "/thumbs/ProjectXSPThumbSquare.webm"
+    },
+    {
       key: "Visual Effects",
       href: "/vfx",
       videoPath: "/thumbs/VFX.webm"
