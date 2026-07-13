@@ -42,6 +42,11 @@ export default function Home() {
       href: "/3dModels",
       imagePath: "/thumbs/3DModels.png"
     },
+    {
+      key: "Lighting & styling",
+      href: "/lightingAndStyling",
+      imagePath: "/thumbs/LightStyle.png"
+    },
     
   ]
 

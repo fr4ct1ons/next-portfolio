@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react'
 import Image from 'next/image';
 import CategoryHeader from '../components/categoryHeader'
@@ -13,15 +11,16 @@ function ProjectXSP() {
 
         <h2 style={{marginBottom: "4rem"}}>Stealth immersive sim set between two worlds: One in the present, one in the past</h2>
 
-        <p style={{marginBottom: "4rem"}}><u>TL;DR:</u> Project XSP is a personal project of mine made in Unreal Engine 5. It's a low-poly stealth immersive sim set in a underground military base where the player can at any time travel back and forth in time. The main inspirations are Metal Gear Solid, Deus Ex, Deathloop and Dishonored 2, specially the A Crack in the Slab mission. Below are some videos of <u>visual effects, 3D models, animations and UI</u> I made specificallyr for the game.</p>
+        <p style={{marginBottom: "4rem"}}><u>TL;DR:</u> Project XSP is a personal project of mine made in Unreal Engine 5. It's a low-poly stealth immersive sim set in a underground military base where the player can at any time travel back and forth in time. The main inspirations are Metal Gear Solid, Deus Ex, Deathloop and Dishonored 2, specially the A Crack in the Slab mission. Below are some videos of <u>visual effects, 3D models, animations and UI</u> I made specificallyr for the game. The source code is currently available on <a href="https://github.com/fr4ct1ons/project-xsp">GitHub</a> if you want to check it out.</p>
 
         <p>Project XSP is a personal project I'm making in Unreal Engine 5 more as a demo than an actual finished game.</p>
-
         <p>In this 3D low-poly stealth based immersive simulator, the player is sent to an underground military base to investigate a science experiment gone wrong where the soldiers in the base have all turned into zombie-like creatures and stop it... by any means necessary.</p>
-
         <p>As a new member of the Cross Space-time Partition, the protagonist has a very unique tool at their disposal: The XS-Swapper, which allows them to, in the same place, travel back and forth between two moments in time, all with the click of a button. </p>
-
         <p>The game is inspired both by classics like Metal Gear Solid and Deus Ex, but also by more modern games like Dishonored 2, Deus Ex: Human Revolution and Deathloop. Specifically, the underground military base setting comes from Metal Gear Solid 1 and 2, the FPS gameplay comes from Deathloop and, perhaps more obviously, the time travel concept comes from the "A Crack in the Slab" mission from Dishonored 2 - Definitely my favourite mission in probably any game of this genre!</p>
+
+        <br/>
+
+        <p>Below you can see some work related to VFX, UI, 3D modelling, rigging and animating, coding and graphics.</p>
 
         <p>When I started this project, I decided to work on the time travel aspect first, as it is the center piece of the game. I made a system where the map is divided in two parts: One in the present {"(where the player is first spawned)"}, another one in the past. When the player is on Space A, Space B has an object with a SceneCapture2D component that mimics the player's camera but in relation to Space B. A capsule collider is then used to check if a swap/teleport is possible or not. Here's an example of how the actual map looks like.</p>
         <Image className='w-[100%] mx-auto my-8' width={1280} height={720} alt={"Two similar levels"} src={"project-xsp/TwoWorlds.jpg"}/>
@@ -55,7 +54,16 @@ function ProjectXSP() {
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowFullScreen></iframe>
-      
+
+        <p>There's also the UI! It's still very much in progress, but it already shows what I have in mind for it. I want it to resemble an old computer screen or an old VCR. My main references are Signalis, the original Deus Ex and Cyberpunk 2077. It's also fully localized!</p>
+
+        <iframe className="ytVideo" 
+        src="https://www.youtube.com/embed/K_REiu3Sl_k?si=7IaK3RXA6e-hgaDh" 
+        title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowFullScreen></iframe>
+
+      <p>The source code is currently available on <a href="https://github.com/fr4ct1ons/project-xsp">GitHub</a> if you want to take a lok at it.</p>
       </main>
     )
 }
