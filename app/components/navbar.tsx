@@ -25,7 +25,7 @@ function Navbar() {
       key: "/"
     },
     {
-      img:"/social-media/SVG/SketchfabLogo.svg",
+      img:"/social-media/SVG/SketchFabLogo.svg",
       key: "https://sketchfab.com/fr4ct1ons"
     },
     {
