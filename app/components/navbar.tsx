@@ -13,33 +13,31 @@ function Navbar() {
 
   const images = [
     {
-      img:"/social-media/ArtStation-icon.png",
+      img:"/social-media/SVG/ArtStationLogo.svg",
       key: "https://www.artstation.com/fr4ct1ons"
     },
     {
-      img:"/social-media/Github-icon.png",
+      img:"/social-media/SVG/GitHubLogo.svg",
       key: "https://github.com/fr4ct1ons"
     },
-    /*
     {
-      img:"/social-media/Itchio-icon.png",
-      path: "/"
+      img:"/social-media/SVG/ItchIoLogo.svg",
+      key: "/"
     },
-    */
     {
-      img:"/social-media/Sketchfab-icon.png",
+      img:"/social-media/SVG/SketchfabLogo.svg",
       key: "https://sketchfab.com/fr4ct1ons"
     },
     {
-      img:"/social-media/Twitter-icon.png",
+      img:"/social-media/SVG/TwitterLogo.svg",
       key: "https://twitter.com/fr4ct1ons"
     },
     {
-      img:"/social-media/Bsky-icon.png",
+      img:"/social-media/SVG/BlueskyLogo.svg",
       key: "https://bsky.app/profile/fr4ct1ons.bsky.social"
     },
     {
-      img:"/social-media/LinkedIn-icon.png",
+      img:"/social-media/SVG/LinkedInLogo.svg",
       key: "https://www.linkedin.com/in/gabriel-lucena-405a551b6/"
     },
     
@@ -79,7 +77,7 @@ function Navbar() {
               {images.map((e) => {
                 return (
                 <Link href={e.key}>
-                  <Image width={720} height={720} src={e.img} alt={e.img} loading='eager'/>
+                  <Image style={{color: "blue"}} width={720} height={720} src={e.img} alt={e.img} loading='eager'/>
                 </Link>)
               })}
             </div>

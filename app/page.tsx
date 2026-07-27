@@ -35,17 +35,17 @@ export default function Home() {
     {
       key: "Tools",
       href: "/tools",
-      imagePath: "/thumbs/CodeNTools.png"
+      imagePath: "/thumbs/CodeNTools.webp"
     },
     {
       key: "3D Models",
       href: "/3dModels",
-      imagePath: "/thumbs/3DModels.png"
+      imagePath: "/thumbs/3DModels.webp"
     },
     {
       key: "Lighting & styling",
       href: "/lightingAndStyling",
-      imagePath: "/thumbs/LightStyle.png"
+      imagePath: "/thumbs/LightStyle.webp"
     },
     
   ]
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="fgVideo">
           <div>
             <h1 className={MobileConditionalString("text-4xl mt-[8vw] my-4", "text-7xl mb-8")}>Hi, I'm Gabriel!</h1>
-            <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My work over 5+ years as a tech artist</h2>
+            <h2 className={MobileConditionalString("text-m my-4", "text-2xl")}>My work over 6 years as a tech artist</h2>
           </div>
 
           <iframe
@@ -82,8 +82,8 @@ export default function Home() {
         </div>
         }
         
-        <video className="bgVideo" muted loop autoPlay playsInline poster="/OLO-Still-4x3-Poster.png">
-          <source src={MobileConditionalString("/OLO-Still-4x3.webm", "/OLO-Still-Ultrawide.webm")} type="video/webm" />
+        <video className="bgVideo" muted loop autoPlay playsInline poster="/OLO-Still-4x3-Poster.webp">
+          <source src={MobileConditionalString("/PortfolioBannerUltrawide2026v1_4x3.webm", "/PortfolioBannerUltrawide2026v1.webm")} type="video/webm" />
         </video>
       </div>
       <main>
@@ -98,7 +98,7 @@ export default function Home() {
           <GalleryLink videoSrc={"/thumbs/CombotronicaThumb.webm"} title={"Combotronica"} href={"/combotronica"}/>
           <GalleryLink videoSrc={"/thumbs/OLO.webm"} title={"One Lonely Outpost"} href={"/oneLonelyOutpost"}/>
           <GalleryLink videoSrc={"/thumbs/SPS.mp4"} title={"Steampunk Shinobi"} href={"/steampunkShinobi"}/>
-          <GalleryLink imageSrc={"/thumbs/RiseThirdPower.png"} title={"Rise of the Third Power"} href={"/riseOfTheThirdPower"}/>
+          <GalleryLink imageSrc={"/thumbs/RiseThirdPower.webp"} title={"Rise of the Third Power"} href={"/riseOfTheThirdPower"}/>
         </div>
 
         <h3>Personal projects</h3>
@@ -111,9 +111,9 @@ export default function Home() {
 
         <h3>Projects by stack</h3>
         <div className={styles.grid}>
-          <GalleryLink imageSrc={"/thumbs/ProjectsUnreal.png"} title={"Unreal"} href={"/projectsUnreal"}/>
-          <GalleryLink imageSrc={"/thumbs/ProjectsUnity.png"} title={"Unity"} href={"/projectsUnity"}/>
-          <GalleryLink imageSrc={"/thumbs/ProjectsGodot.png"} title={"Godot"} href={"/projectsGodot"}/>
+          <GalleryLink imageSrc={"/thumbs/ProjectsUnreal.webp"} title={"Unreal"} href={"/projectsUnreal"}/>
+          <GalleryLink imageSrc={"/thumbs/ProjectsUnity.webp"} title={"Unity"} href={"/projectsUnity"}/>
+          <GalleryLink imageSrc={"/thumbs/ProjectsGodot.webp"} title={"Godot"} href={"/projectsGodot"}/>
         </div>
 
       </main>
